@@ -90,18 +90,7 @@ export default function MemberLoginPage() {
           </Button>
         </form>
 
-        {/* Admin login link */}
-        <div className="mt-6 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Are you an admin?{' '}
-            <Link
-              to="/login"
-              className="font-medium text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 transition-colors"
-            >
-              Admin Login
-            </Link>
-          </p>
-        </div>
+
       </div>
     </div>
   );
