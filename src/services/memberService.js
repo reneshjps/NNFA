@@ -75,12 +75,16 @@ export const memberService = {
   },
 
   async deleteMember(id) {
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from('members')
       .delete()
-      .eq('id', id);
+      .eq('id', id)
+      .select();
 
     if (error) throw error;
+    if (!data || data.length === 0) {
+      throw new Error('Failed to delete member. You may not have the required permissions (Super Admin only).');
+    }
     return { success: true };
   },
 
