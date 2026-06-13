@@ -20,15 +20,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          supabase: ['@supabase/supabase-js'],
-          ui: ['lucide-react', 'react-icons', 'recharts'],
-          utils: ['dayjs', 'zustand', 'react-hook-form', 'react-hot-toast'],
-        },
-      },
-    },
   },
 });
