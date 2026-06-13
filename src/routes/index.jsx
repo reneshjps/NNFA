@@ -164,7 +164,7 @@ export const router = createBrowserRouter([
   // Redirect root
   {
     path: '/',
-    element: <Navigate to="/login" replace />,
+    element: <Navigate to="/member-login" replace />,
   },
 
   // 404
